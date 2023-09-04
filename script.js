@@ -5,13 +5,9 @@ alert("Hello World!");
 document.write("Hello World!");
 
 //Hello World dentro do article no primeiro p
-//Por que o getElementById não funciona?
-document.getElementById("text").innerHTML = "Hello World!";
-
-//Aparece o hello world depois que clica no botão
-function button2() {
-    return document.getElementById("button2").innerHTML = "Hello World!"
-  };
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("li").innerHTML = "Hello World!";
+});
 
 //Primeiro botão
 function button1() {
@@ -21,8 +17,36 @@ function button1() {
 //print hello world
 console.log("Hello World!");
 
-//Por quê não funciona?
-const myElement = document.getElementById("li");
-document.getElementById("demo").innerHTML = myElement.innerHTML;
+//Aparecer no h1 do html
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("demo").innerHTML = "Hello world!";
+});
+
+//Atribuindo uma variável e inserindo no body
+var textNode = document.createTextNode("Hello World!");
+document.body.appendChild(textNode);
+
+//Atribuinndo uma variável e imprimindo no console
+var mensagem = "Hello World!";
+console.log(mensagem);
+
+//Criando uma função para printar o hello world
+function sayHello() {
+  alert("Hello World!");
+}
+sayHello();
+
+//Criando uma arrow function
+var sayHello = '';
+var sayHello = () => {
+  alert("Hello World!");
+};
+sayHello();
+
+//Usando uma função IIFE
+(function() {
+  console.log("Hello World!");
+})();
+
 
 
